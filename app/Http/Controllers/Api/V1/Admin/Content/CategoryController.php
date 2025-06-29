@@ -43,10 +43,12 @@ class CategoryController extends Controller
               return PostCategoryResource::collection(PostCategory::with(['parent'])->where('name', 'like',  '%' . $searchVal . '%')->orderBy('created_at', 'desc')->get());
             }
           return PostCategoryResource::collection(PostCategory::with(['parent'])->where('name', 'like',  '%' . $searchVal . '%')->orderBy('created_at', 'desc')->paginate($paginate));
-          
+        
         }
+        
         else if($paginate){
-            return PostCategoryResource::collection(PostCategory::with(['parent'])->orderBy('created_at', 'desc')->paginate($paginate));
+            return  PostCategoryResource::collection(PostCategory::with(['parent'])->orderBy('created_at', 'desc')->paginate($paginate));
+           
         }else if ($paginate === null) {
             return PostCategoryResource::collection(PostCategory::with(['parent'])->where('name', 'like',  '%' . $searchVal . '%')->orderBy('created_at', 'desc')->get());
           }

@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\V1\Admin\Content\BannerController;
-use App\Http\Controllers\API\V1\Admin\Content\CategoryController;
+use App\Http\Controllers\Api\V1\Admin\Content\CategoryController;
 use App\Http\Controllers\Api\V1\Admin\Content\CommentController;
 use App\Http\Controllers\Api\V1\Admin\Content\FaqController;
 use App\Http\Controllers\Api\V1\Admin\Content\MenuController;
